@@ -1,0 +1,17 @@
+.container {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote,
+.speaker {
+    font-size: 2em;
+    margin: 0;
+}
+
+.speaker {
+    text-align: right;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,10 @@
+body {
+  background-image: url('../src/images/bg-konoha.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #332c36;
+  padding: 0;
+  margin: 0;
+  font-family: 'New Tegomin', serif;
+}
