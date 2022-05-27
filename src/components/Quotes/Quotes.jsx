@@ -6,8 +6,8 @@ import { string, func } from 'prop-types';
 export function Quotes({ quote, speaker, upDate }) {
     return (
         <div className='container' >
-            <div className='quote' >{quote}</div>
-            <div className='speaker' >- {speaker}</div>
+            <p className='quote' >{quote}</p>
+            <p className='speaker' >- {speaker}</p>
             <Button onClick={upDate} >Quote No Jutsu!</Button>
         </div>
     );

@@ -1,17 +1,27 @@
 import narutoImg from '../images/naruto.png'
 import styled from 'styled-components'
 import { Quotes } from '../components/Quotes/Quotes';
-
+import { useState } from 'react';
+import { api } from '../lib/api'
 
 export function App() {
+  const [quote, setQuote] = useState('');
+  const [speaker, setSpeaker] = useState('');
 
-  function fraseandoNoConsole() {
-    console.log('graaaaaaaa');
+  async function handleUpdate(event) {
+    event.preventDefault();
+
+    const response = await api.get('/', {});
+
+    const quoteReceived = response.data.quote;
+    const speakerReceived = response.data.speaker;
+    setQuote(quoteReceived);
+    setSpeaker(speakerReceived);
   }
 
   return (
     <Content>
-      <Quotes quote={'ok'} speaker={'Alguem'} upDate={fraseandoNoConsole} />
+      <Quotes quote={quote} speaker={speaker} upDate={handleUpdate} />
       <NarutoImg src={narutoImg} alt="Naruto with a kunai" />
     </Content>
   );
